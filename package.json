@@ -1,0 +1,59 @@
+{
+  "name": "with-remix",
+  "private": true,
+  "sideEffects": [
+    "polyfills.ts"
+  ],
+  "scripts": {
+    "build": "npm run build:css && remix build",
+    "build:css": "tailwindcss -m -i app/styles/app.css -o app/styles/app.css",
+    "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
+    "dev:css": "tailwindcss -w -i ./tail.css -o app/styles/app.css"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@material-ui/core": "^4.12.4",
+    "@mui/material": "^5.14.15",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.3",
+    "@rainbow-me/rainbowkit": "latest",
+    "@remix-run/node": "^1.5.1",
+    "@remix-run/react": "^1.5.1",
+    "@remix-run/serve": "^1.5.1",
+    "buffer-polyfill": "npm:buffer@^6.0.3",
+    "openai": "^4.14.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-particle-animation": "^2.0.2",
+    "react-particles": "^2.12.2",
+    "react-player": "^2.13.0",
+    "react-responsive": "^9.0.2",
+    "react-type-animation": "^3.2.0",
+    "remix-utils": "^7.1.0",
+    "styled-components": "^6.1.0",
+    "tsparticles-engine": "^2.12.0",
+    "tsparticles-plugin-emitters": "^2.12.0",
+    "tsparticles-preset-hyperspace": "^2.12.0",
+    "tsparticles-slim": "^2.12.0",
+    "usellm": "^0.13.0",
+    "vanta": "^0.5.24",
+    "viem": "~1.16.3",
+    "wagmi": "~1.4.3"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.5.1",
+    "@remix-run/eslint-config": "^1.5.1",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.15.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "version": "0.0.68"
+}
